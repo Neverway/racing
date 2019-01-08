@@ -3,8 +3,8 @@ import pygame
 # This is important and needs to be first
 pygame.init()
 
-display_width = 800
-display_height = 600
+display_width = 640
+display_height = 480
 
 black = (0, 0, 0)
 white = (255, 255, 255)
@@ -49,7 +49,7 @@ while not dead:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 x_change = -2
-            elif event.key == pygame.K_RIGHT:
+            if event.key == pygame.K_RIGHT:
                 x_change = 2
 
 
@@ -61,7 +61,7 @@ while not dead:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
                 y_change = -2
-            elif event.key == pygame.K_DOWN:
+            if event.key == pygame.K_DOWN:
                 y_change = 2
 
         if event.type == pygame.KEYUP:
@@ -77,7 +77,7 @@ while not dead:
     char(x, y)
 
     pygame.display.update()
-    clock.tick(60)
+    clock.tick(30)
 
 pygame.quit()
 quit()
