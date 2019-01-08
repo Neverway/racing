@@ -1,18 +1,18 @@
 import pygame
 
-#This is important and needs to be first
+# This is important and needs to be first
 pygame.init()
 
-#Windows resolution
+# Windows resolution
 gameDisplay = pygame.display.set_mode((800,600))
 
-#Windows name
-pygame.display.set_caption('Car Movement Test')
+# Windows name
+pygame.display.set_caption('Serpent')
 
-#Game clock(FPS)
+# Game clock(FPS)
 clock = pygame.time.Clock()
 
-#Game loop
+# Game loop
 dead = False
 
 while not dead:
@@ -22,3 +22,9 @@ while not dead:
             dead = True
 
         print(event)
+
+    pygame.display.update()
+    clock.tick(60)
+
+pygame.quit()
+quit()
