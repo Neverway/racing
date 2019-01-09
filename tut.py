@@ -1,4 +1,5 @@
 import pygame
+from constants import Colors
 
 # This is important and needs to be first
 pygame.init()
@@ -6,13 +7,6 @@ pygame.init()
 # Resolution edits
 display_width = 640
 display_height = 480
-
-# Define colors
-black = (0, 0, 0)
-white = (255, 255, 255)
-red = (255, 0, 0)
-green = (0, 255, 0)
-blue = (0, 0, 255)
 
 # Windows resolution
 game_display = pygame.display.set_mode((display_width, display_height))
@@ -69,7 +63,7 @@ def game_loop():
         x += x_change
         y += y_change
 
-        game_display.fill(black)
+        game_display.fill(Colors.black)
         char(x, y)
         pygame.display.update()
     clock.tick(30)
